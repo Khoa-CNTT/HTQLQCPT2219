@@ -22,6 +22,7 @@ public interface IUserService {
     boolean isPasswordExpired(Users Users);
     String updatePassword(Users Users);
     Optional<Users> findByUsername(String username);
+
     UserDTO ConverDTO(Users Users);
     UserInforRespone converUser(Users Users);
     Users findByPhone(String phone);
@@ -37,6 +38,7 @@ public interface IUserService {
     Users update(EmployeeUpdateDTO employeeUpdateDTO, Integer id);
     void delete(Integer id);
     Page<Users> searchUsers(String useName, String fullName, String numberPhone, Pageable pageable);
+    Page<Users> findUsersByRole(String role, Pageable pageable);
 
     // duong
     public List<Users> getAllUsers();

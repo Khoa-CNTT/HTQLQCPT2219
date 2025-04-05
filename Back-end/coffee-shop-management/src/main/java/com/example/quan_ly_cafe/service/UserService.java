@@ -347,6 +347,12 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public Page<Users> findUsersByRole(String role, Pageable pageable) {
+        // Gọi đến repository để tìm kiếm người dùng có role là ROLE_USER
+        return userRepo.findByRoleRoleName(role, pageable);
+    }
+
+    @Override
     public List<Users> getAllUsers() {
         return (List<Users>) userRepo.findAll();
     }

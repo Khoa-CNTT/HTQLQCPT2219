@@ -18,7 +18,7 @@ public interface IUserRepository extends JpaRepository<Users, Integer> {
     boolean existsByUsername(String username); // hafm kiem tra tai khoan co ton tai hay khong
     boolean existsByEmail(String email);
     boolean existsByNumberphone(String numberphone);
-
+    Page<Users> findByRoleRoleName(String roleName, Pageable pageable);
 
     @Query(value = "SELECT * FROM users WHERE user_name = :username", nativeQuery = true)
     Optional<Users> findByUsername(@Param("username") String username);
@@ -26,6 +26,7 @@ public interface IUserRepository extends JpaRepository<Users, Integer> {
     @Transactional
     @Query(value = "SELECT u FROM Users u WHERE u.role.roleId = 1")
     Page<Users> findAllAdmin(Pageable pageable);
+
 
     Page<Users> findAllByRole(Roles role, Pageable pageable);
     Optional<Users> findByNumberphone(String numberphone);
