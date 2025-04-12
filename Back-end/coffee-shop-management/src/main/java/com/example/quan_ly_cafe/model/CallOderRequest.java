@@ -24,8 +24,9 @@ public class CallOderRequest {
     @JoinColumn(name = "table_id")
     private Table table;
 
-    @OneToMany(mappedBy = "callOderRequest")    
+    @OneToMany(mappedBy = "callOderRequest")
     @JsonIgnore
+//    @JsonManagedReference
     private List<OderDetail> oderDetails;
     // Quan hệ 1-1 với Feedback
     @OneToOne(mappedBy = "callOderRequest", cascade = CascadeType.ALL)

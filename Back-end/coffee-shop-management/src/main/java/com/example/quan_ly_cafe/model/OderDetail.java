@@ -1,5 +1,6 @@
 package com.example.quan_ly_cafe.model;
 
+import jakarta.persistence.Table;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,17 +14,21 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "oder_detail")  // Chỉ định rõ tên bảng trong cơ sở dữ liệu
+
 public class OderDetail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long oderDetailId;
     private int quantity;
+    @Column(name = "shipping_day")  // Đảm bảo rằng tên cột trùng với tên cột trong bảng (shipping_day trong DB)
     private String shippingDay;
     private Boolean status;
     private Double totalMoneyOder;
 
     @ManyToOne
     @JoinColumn(name = "call_oder_request_id")
+//    @JsonBackReference
     private CallOderRequest callOderRequest;
     @ManyToOne
     @JoinColumn(name = "size_id") // Tham chiếu đến bảng Size

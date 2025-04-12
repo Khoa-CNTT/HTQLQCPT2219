@@ -1,7 +1,8 @@
 package com.example.quan_ly_cafe.dto;
 
 
-import com.example.quan_ly_cafe.Validation.SalaryMultiple;
+import com.example.quan_ly_cafe.Validation.EmailExists;
+import com.example.quan_ly_cafe.Validation.NumberphoneExists;
 import com.example.quan_ly_cafe.Validation.UniqueUsername;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -29,6 +30,7 @@ public class EmployeeDTO {
 
     @NotBlank(message = "so dien thoai khong duoc de trong ")
     @Pattern(regexp = "^(03|05|07|08|09)\\d{8}$", message = "So dien thoai khong dung dinh dang ")
+    @NumberphoneExists
     private String numberphone;
 
     @NotBlank(message = "Khong duoc de trong")
@@ -45,9 +47,10 @@ public class EmployeeDTO {
     @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
             message = "Email không hợp lệ")
     @Size(max = 50,message = "khong duoc qua 50 ki tu")
+    @EmailExists
     private String email;
     private Boolean gender;
-    @SalaryMultiple
+//    @SalaryMultiple
     private Double salary;
 
     private Boolean isActive;

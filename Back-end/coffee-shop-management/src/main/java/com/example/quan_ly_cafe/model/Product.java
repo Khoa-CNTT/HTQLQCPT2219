@@ -35,7 +35,9 @@ public class Product {
     @Lob
     @Column(columnDefinition = "TEXT")
     private String productDescription;
-
+    @JsonIgnore
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<ProductIngredient> productIngredients;
 
 
     @ManyToOne

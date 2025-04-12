@@ -19,7 +19,6 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long categoryId;
     private String categoryCode;
-    private String categoryImgUrl;
     private String categoryName;
     @JsonIgnore
     @OneToMany(mappedBy = "category")

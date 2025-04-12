@@ -1,11 +1,11 @@
 package com.example.quan_ly_cafe.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -17,4 +17,8 @@ public class Topping {
 
     private String name;  // Tên topping (Ví dụ: Trân châu, Thạch)
     private Double price; // Giá của topping
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "topping", cascade = CascadeType.ALL)
+    private List<ToppingIngredient> toppingIngredients;
 }
