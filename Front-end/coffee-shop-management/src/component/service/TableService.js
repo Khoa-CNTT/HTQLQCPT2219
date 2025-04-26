@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_URL = "http://localhost:8081/api/table";
 
-export const getAllTables = async (page = 0, size = 20) => {
+export const getAllTables = async (page = 0, size = 50) => {
     const token = localStorage.getItem('token');
     try {
         const response = await axios.get(`${API_URL}?page=${page}&size=${size}`, {

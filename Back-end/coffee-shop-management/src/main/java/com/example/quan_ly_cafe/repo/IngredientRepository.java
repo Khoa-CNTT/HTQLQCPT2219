@@ -16,5 +16,8 @@ public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
     @Query("SELECT i FROM Ingredient i WHERE i.quantityInStock <= i.minimumStock")
     List<Ingredient> findLowStockIngredients();
     Optional<Ingredient> findById(Long id);
+    boolean existsByNameIgnoreCase(String name);
+    boolean existsByName(String name);
+    Optional<Ingredient> findByName(String name);
 
 }

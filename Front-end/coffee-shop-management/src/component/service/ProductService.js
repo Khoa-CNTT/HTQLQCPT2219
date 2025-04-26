@@ -24,6 +24,18 @@ export const getAllProduct = async (page, size) => {
         throw error;
     }
 };
+export const fetchProducts = async (page = 0, size = 50) => {
+    try {
+        const response = await fetch(`http://localhost:8081/api/product?page=${page}&size=${size}`);
+        if (!response.ok) {
+            throw new Error("Lỗi khi gọi API");
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Lỗi trong service fetchProducts:", error);
+        throw error; // throw lại để xử lý ở component nếu cần
+    }
+};
 // Hàm tìm kiếm sản phẩm
 export const searchProducts = async (searchTerm, page = 0, size = 9) => {
     try {
