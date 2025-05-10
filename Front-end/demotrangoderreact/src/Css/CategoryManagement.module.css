@@ -1,0 +1,430 @@
+.qContainer {
+    padding: 20px;
+    background-color: #f8f4f1; /* Màu nền nhẹ nhàng, phù hợp với phong cách quán cà phê */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.qTitle {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.qSearchContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Tạo khoảng cách giữa các ô input và nút tìm kiếm */
+    margin-bottom: 20px;
+}
+
+.qSearchInput {
+    width: 30%; /* Chiều rộng cố định cho mỗi ô input */
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 40px; /* Chiều cao cố định cho ô input */
+    white-space: nowrap; /* Đảm bảo chữ trong ô input không xuống dòng */
+    overflow: hidden; /* Giới hạn văn bản trong một dòng */
+    text-overflow: ellipsis; /* Thêm ba dấu chấm (...) nếu văn bản quá dài */
+    outline: none!important; /* Xóa bỏ viền mặc định khi focus */
+
+}
+
+.qSearchInput:focus {
+    border-color: #8c4b35!important; /* Màu nâu ấm, phù hợp với phong cách quán cà phê */
+    outline: none;
+}
+
+.qSearchButton {
+    background-color: #8c4b35; /* Màu nâu ấm, giống màu gỗ của quán cà phê */
+    color: white;
+    padding: 10px 30px; /* Cải thiện chiều rộng và chiều cao cho nút */
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    height: 40px; /* Chiều cao của nút bằng chiều cao ô input */
+    white-space: nowrap; /* Đảm bảo chữ không xuống dòng */
+    text-align: center;
+}
+
+.qSearchButton:hover {
+    background-color: #c78e65; /* Màu nâu sáng hoặc màu caramel khi hover */
+    transform: scale(1.05);
+}
+
+.qSearchButton:active {
+    transform: scale(1);
+}
+
+.qAddButtonContainer {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.qAddButton {
+    background-color: #8c4b35; /* Màu nâu ấm, giống màu gỗ của quán cà phê */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.qAddButton:hover {
+    background-color: #c78e65; /* Màu nâu sáng hoặc màu caramel khi hover */
+    transform: scale(1.05);
+}
+
+.qCategoryTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.qCategoryTable th, .qCategoryTable td {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.qCategoryTable th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.qCategoryTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.qCategoryTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+.qColumnAction {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*gap: 10px;*/
+    /*font-size: 18px;*/
+}
+
+.qColumnAction span {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.qColumnAction span:hover {
+    transform: scale(1.2);
+}
+
+.qCategoryTable td[colspan="4"] {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+.actionIcon {
+    font-size: 20px; /* Kích thước icon lớn hơn */
+    margin: 0 12px; /* Tạo khoảng cách giữa các icon */
+    cursor: pointer; /* Thêm hiệu ứng con trỏ khi hover */
+    transition: transform 0.2s ease, color 0.3s ease, border-color 0.3s ease;
+    padding: 6px; /* Thêm khoảng cách trong cùng với viền */
+    border-radius: 50%; /* Viền tròn xung quanh icon */
+    border: 2px solid transparent; /* Viền ban đầu trong suốt */
+}
+
+/* Khi hover vào icon */
+.actionIcon:hover {
+    color: #8c4b35; /* Màu chữ khi hover (màu nâu phù hợp quán cà phê) */
+    border-color: #8c4b35; /* Thêm viền màu nâu khi hover */
+    transform: scale(1.2); /* Phóng to icon khi hover */
+}
+
+/* Khi icon đang được nhấn */
+.actionIcon:active {
+    transform: scale(1.1); /* Thu nhỏ icon một chút khi nhấn */
+    color: #d65353; /* Màu khi nhấn (đỏ) */
+}
+/* pagination.module.css */
+
+.paginationq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.buttonq {
+    background-color: #6c4f37; /* Màu nâu cà phê */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.buttonq:disabled {
+    background-color: #d1b09e; /* Màu xám khi bị vô hiệu */
+    cursor: not-allowed;
+}
+
+.buttonq:hover {
+    background-color: #4e3629; /* Màu nâu tối khi hover */
+}
+
+.pagination span {
+    color: #6c4f37; /* Màu chữ tương ứng với màu nâu */
+    font-weight: 600;
+}
+
+/* Modal nền mờ */
+.modalOverlayr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Làm mờ nền */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Nội dung modal */
+.modalContentr {
+    background-color: #f8f5f2; /* Màu be nhạt, tạo cảm giác ấm áp */
+    padding: 40px 30px;
+    border-radius: 16px;
+    width: 500px; /* Tăng kích thước */
+    max-width: 95%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInModal 0.3s ease-in-out;
+}
+
+/* Tiêu đề modal */
+.modalContentr h3 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #4e342e; /* Màu nâu cà phê đậm */
+}
+
+/* Label và input trong form */
+.modalContentr label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #6d4c41; /* Nâu nhạt */
+}
+
+.modalContentr input {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+    border: 2px solid #d7ccc8;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fffaf0; /* Màu nền nhẹ nhàng */
+    transition: border-color 0.2s ease;
+}
+.modalContentr input:focus{
+    border: 2px solid #d7ccc8!important;
+    outline: none;
+}
+.modalContentr input:focus {
+    border-color: #a1887f; /* Màu nâu trung tính */
+    outline: none;
+}
+
+/* Vùng chứa nút */
+.modalButtons {
+    display: flex;
+    justify-content: space-between; /* Đẩy nút ra hai góc */
+    margin-top: 20px;
+}
+
+/* Nút hành động */
+.modalButtons button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Nút Lưu */
+.modalButtons .saveBtn {
+    background-color: #6d4c41; /* Màu nâu cà phê */
+    color: white;
+}
+
+.modalButtons .saveBtn:hover {
+    background-color: #5d4037;
+    transform: scale(1.05);
+}
+
+/* Nút Hủy */
+.modalButtons .cancelBtn {
+    background-color: #d7ccc8; /* Màu be */
+    color: #4e342e;
+}
+
+.modalButtons .cancelBtn:hover {
+    background-color: #bcae9e;
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiển thị lỗi */
+.errorText {
+    color: red;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.inputErrorr {
+    border: 1px solid red !important;
+}
+
+.errorTextr {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.modalrr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContentrr {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.modalButtonrr {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.modalrr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-out forwards;
+    z-index: 1000;
+}
+
+.modalContentrr {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    animation: slideIn 0.3s ease-out forwards;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    transition: all 0.3s ease-in-out;
+}
+
+.modalContentrr h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.buttonGrouprr {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.modalButtonrr {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #a47148; /* caramel coffee */
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.modalButtonrr:hover {
+    background-color: #6b3e26; /* đậm hơn như espresso */
+    transform: scale(1.05);
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

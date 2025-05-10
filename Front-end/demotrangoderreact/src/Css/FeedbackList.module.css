@@ -1,0 +1,7 @@
+/* Cột tác vụ */
+.actions12 {
+    /*display: flex;*/
+    justify-content: center;
+    gap: 20px; /* Tăng khoảng cách giữa các nút */
+
+}

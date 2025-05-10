@@ -1,0 +1,492 @@
+.containeri1 {
+    padding: 20px;
+    background: #fff8f0; /* Màu nền ấm cho form */
+}
+.headerTextt11 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.searchContainer111 {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Đề phòng màn nhỏ bị tràn */
+    width: 100%;
+    margin-bottom: 20px;
+}
+.searchInput111 {
+    flex: 1 1 200px; /* input co dãn, nhưng tối thiểu là 200px */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fffaf5;
+    color: #3e2723;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.searchInput111{
+    border: 1px solid #3e2723!important;
+}
+
+.searchButton111 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #6d4c41;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchButton111:hover {
+    background-color: #4e342e;
+}
+.iconSearch111 {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Nút thêm mới sản phẩm */
+.addProductButton111 {
+    background-color: #8E4B3A; /* Màu nâu ấm, phù hợp với quán cà phê */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.addProductButton111:hover {
+    background-color: #6F2A1C; /* Màu tối hơn khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.addProductButton111 {
+    margin-bottom: 20px;  /* Khoảng cách giữa nút và phần dưới */
+}
+/* Icon thêm vào nút */
+.addIcon111 {
+    font-size: 20px;  /* Kích thước icon */
+}
+.tablet11 {
+    width: 100%;
+    border-collapse: collapse; /* Giúp các viền ô không bị cách nhau */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    background-color: #fff; /* Màu nền sáng cho bảng */
+    overflow-y: hidden !important; /* Ẩn cuộn dọc */
+
+}
+
+/* Tiêu đề bảng */
+.tablet11 thead {
+    background-color: #f8f8f8; /* Màu nền nhạt cho phần tiêu đề */
+    color: #333;
+    font-weight: bold;
+    border-radius: 20px!important; ;
+}
+
+/* Các cột tiêu đề */
+.tablet11 th {
+    padding: 12px 15px;
+    text-align: center; /* Căn giữa các tiêu đề */
+    border-bottom: 2px solid #ddd; /* Viền dưới nhẹ cho các cột */
+}
+
+/* Các dòng trong bảng */
+.tablet11 td {
+    padding: 10px 15px;
+    text-align: center; /* Căn giữa các cột dữ liệu */
+    border-bottom: 1px solid #ddd; /* Viền dưới cho các dòng */
+}
+
+/* Hiệu ứng hover cho mỗi dòng */
+.tablet11 tbody tr:hover {
+    background-color: #f5f5f5; /* Màu nền khi hover qua dòng */
+    cursor: pointer;
+}
+/* Cột tác vụ */
+.actions111 {
+    /*display: flex;*/
+    justify-content: center;
+    gap: 20px; /* Tăng khoảng cách giữa các nút */
+
+}
+/* Nút chỉnh sửa */
+.editButton111, .deleteButton111 {
+    background-color: #8B4513; /* Màu nâu khi hover */
+    border: none;
+    padding: 10px 20px; /* Tăng kích thước nút */
+    font-size: 16px; /* Kích thước chữ */
+    color: white; /* Màu chữ */
+    border-radius: 6px; /* Bo tròn các góc nút */
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    align-items: center; /* Căn giữa icon với chữ */
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+}
+
+/* Nút chỉnh sửa hover */
+.editButton111:hover {
+    background-color: #8B4513; /* Màu nâu khi hover */
+    transform: scale(1.05); /* Phóng to nút khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ khi hover */
+}
+
+/* Nút xóa */
+.deleteButton111 {
+    background-color: #6F4F37; /* Màu nâu khi hover */
+    border: none;
+    padding: 10px 20px; /* Tăng kích thước nút */
+    font-size: 16px; /* Kích thước chữ */
+    color: white; /* Màu chữ */
+    border-radius: 6px; /* Bo tròn các góc nút */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block; /* Đảm bảo các icon nằm trên cùng 1 hàng */
+
+    align-items: center; /* Căn giữa icon với chữ */
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+}
+
+/* Nút xóa hover */
+.deleteButton111:hover {
+    background-color: #6F4F37; /* Màu nâu khi hover */
+    transform: scale(1.05); /* Phóng to nút khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ khi hover */
+}
+/* Thêm icon với FontAwesome */
+.fa-edit, .fa-trash {
+    font-size: 18px; /* Kích thước icon */
+}
+/* Container phân trang */
+.paginationContainert11 {
+    display: flex;
+    justify-content: center; /* Căn giữa phần phân trang */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Nút phân trang "Trước" và "Sau" */
+.paginationButtont11 {
+    background-color: #8e6e53; /* Màu nâu cà phê cho nút */
+    color: white; /* Màu chữ */
+    border: none;
+    padding: 10px 20px; /* Kích thước nút */
+    font-size: 16px; /* Kích thước chữ */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng khi hover */
+    margin: 0 10px; /* Khoảng cách giữa các nút */
+}
+/* Hiển thị trang hiện tại */
+.pageInfot11 {
+    font-size: 18px;
+    font-weight: bold; /* Làm chữ đậm */
+    color: #6f4f28; /* Màu nâu cà phê */
+    margin: 0 10px; /* Khoảng cách giữa các nút */
+}
+
+/* Nút phân trang khi không active */
+.paginationButtont11:focus {
+    outline: none; /* Loại bỏ viền focus */
+}
+.paginationButtont11:hover {
+    background-color: #6f4f28; /* Màu nâu đậm hơn khi hover */
+    transform: scale(1.1); /* Phóng to nút khi hover */
+}
+/* Modal.module.css */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.modalContent2 {
+    background-color: #fffaf0; /* Màu be sáng kiểu vintage */
+    padding: 20px 25px;
+    border-radius: 12px;
+    min-width: 320px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.title2 {
+    color: #b22222; /* đỏ nâu cổ điển */
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.warningList2 {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.warningItem2 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.closeButton2 {
+    margin-top: 20px;
+    padding: 10px 24px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.2s ease;
+}
+
+.closeButton2:hover {
+    background-color: #a0522d;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0 }
+    to { transform: translateY(0); opacity: 1 }
+}
+.modal3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modalContent3 {
+    background-color: #fff8f0;
+    padding: 30px 40px;
+    border-radius: 16px;
+    width: 650px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modalContent3 h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #5c3d2e;
+    text-align: center;
+}
+
+.modalContent3 label {
+    display: block;
+    margin-top: 12px;
+    color: #3e2c23;
+    font-weight: 500;
+}
+
+.modalContent3 input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.modalContent3 input:focus {
+    outline: none;
+    border-color: #a8715c;
+    box-shadow: 0 0 0 2px #ffe0c7;
+}
+
+.error3 {
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.modalContent3 button {
+    margin-top: 18px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.modalContent3 button:first-of-type {
+    background-color: #7b4f3d;
+    color: white;
+    margin-right: 10px;
+}
+
+.modalContent3 button:first-of-type:hover {
+    background-color: #a8715c;
+}
+
+.modalContent3 button:last-of-type {
+    background-color: #ccc;
+}
+
+.modalContent3 button:last-of-type:hover {
+    background-color: #aaa;
+}
+
+.buttonGroup3 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.modalBackdrop4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden; /* Modal ẩn khi không cần hiển thị */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Thêm delay để opacity fade-out mượt */
+}
+
+.modalBackdrop4.open {
+    opacity: 1;
+    visibility: visible; /* Modal sẽ xuất hiện khi có class 'open' */
+    transition: opacity 0.3s ease; /* Hiệu ứng fade-in */
+}
+
+.modalContent4 {
+    background-color: #fff4e1; /* Màu nền vàng nhẹ, phù hợp với quán cà phê */
+    padding: 25px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bóng nhẹ để tạo chiều sâu */
+    font-family: 'Arial', sans-serif;
+    transform: scale(0.9); /* Khởi tạo modal ở kích thước nhỏ */
+    animation: scaleIn 0.3s forwards; /* Hiệu ứng phóng to */
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.modalTitle4 {
+    font-size: 1.5rem;
+    color: #6d4c41; /* Màu nâu nhẹ, dễ chịu */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.modalMessage4 {
+    font-size: 1rem;
+    color: #3e2723; /* Màu nâu sẫm, tạo cảm giác ấm cúng */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modalButton4 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.deleteButton4 {
+    background-color: #ff7043; /* Màu cam ấm, giống màu cà phê */
+    color: white;
+}
+
+.cancelButton4 {
+    background-color: #f1e0c6; /* Màu vàng nhạt nhẹ nhàng */
+    color: #3e2723;
+}
+
+.modalButton4:hover {
+    opacity: 0.8;
+    transform: translateY(-3px); /* Nâng nút lên khi hover */
+}
+
+.modalButton4:active {
+    transform: scale(0.98);
+}
+
+.buttonsContainer4 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalButton4:focus {
+    outline: none;
+}

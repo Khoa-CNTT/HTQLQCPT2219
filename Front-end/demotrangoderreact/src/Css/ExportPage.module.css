@@ -1,0 +1,101 @@
+.orderDetailsWrapper {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.orderDetailsTitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #333;
+    padding-bottom: 10px;
+}
+
+.userName, .tableName, .paymentStatus {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.orderDetailsEmpty {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+}
+
+.orderDetailsList {
+    margin: 20px 0;
+    border-top: 2px dashed #333;
+    padding-top: 10px;
+}
+
+.orderDetailsCard {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px dashed #999;
+}
+
+.orderDetailsCardText {
+    font-size: 14px;
+    margin: 2px 0;
+    line-height: 1.5;
+}
+
+.orderDetailsSummary {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px dashed #333;
+    font-size: 16px;
+    text-align: right;
+}
+
+.orderDetailsSummary p {
+    margin: 5px 0;
+}
+.invoiceCode {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.currentDate {
+    font-size: 16px;
+    margin: 5px 0 15px 0;
+    color: #555;
+}
+.userNamee{
+    font-size: 16px;
+    margin: 5px 0; /* Đặt lại margin phải để không kéo về giữa */
+    color: #555;
+    text-align: left;
+    display: block;
+}
+.shopInfo {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.shopName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.shopAddress,
+.shopPhone {
+    font-size: 14px;
+    margin: 4px 0;
+}
+.thankYouMessage {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}

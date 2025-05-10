@@ -1,0 +1,630 @@
+/*.loginContainer {*/
+/*    display: flex;*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    background: linear-gradient(to right, #8B5E3B, #4E342E); !* Màu nâu trầm của cà phê *!*/
+/*}*/
+
+/*!* Phần bên trái với hình nền *!*/
+/*.leftPanel {*/
+/*    flex: 1;*/
+/*    background: url('https://source.unsplash.com/800x800/?coffee,cafe') center/cover no-repeat;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    color: white;*/
+/*    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);*/
+/*    font-size: 2.5rem;*/
+/*    font-weight: bold;*/
+/*    animation: fadeInLeft 1s ease-in-out;*/
+/*}*/
+
+/*!* Phần bên phải chứa form *!*/
+/*.rightPanel {*/
+/*    flex: 1.2; !* Chiếm nhiều không gian hơn *!*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    background: #FAF3E0; !* Màu be nhạt *!*/
+/*    animation: fadeInRight 1s ease-in-out;*/
+/*    height: 720px;*/
+/*}*/
+
+/*!* Form đăng nhập *!*/
+/*.loginBox {*/
+/*    width: 800px; !* To hơn *!*/
+/*    height: 1050px;*/
+/*    padding: 50px;*/
+/*    border-radius: 15px;*/
+/*    background: rgba(255, 255, 255, 0.95);*/
+/*    text-align: center;*/
+/*    backdrop-filter: blur(10px);*/
+/*    transition: transform 0.3s ease-in-out;*/
+/*    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+
+/*!* Header đăng nhập *!*/
+/*.loginHeader {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    margin-bottom: 0px;*/
+/*    margin-top: 0px;*/
+/*}*/
+
+/*.icon {*/
+/*    font-size: 4rem;*/
+/*    color: #6D4C41; !* Nâu cafe đậm *!*/
+/*    animation: bounce 1.5s infinite;*/
+/*}*/
+
+/*.headerText {*/
+/*    font-size: 2.2rem;*/
+/*    font-weight: bold;*/
+/*    color: #5D4037; !* Nâu đậm *!*/
+/*}*/
+
+/*!* Ô input *!*/
+/*.formGroup {*/
+/*    margin-bottom: 22px;*/
+/*}*/
+
+/*.inputWithIcon {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    border: 2px solid #BCAAA4; !* Viền nâu nhạt *!*/
+/*    padding: 8px 12px; !* Giảm padding *!*/
+/*    border-radius: 8px; !* Giảm bo tròn *!*/
+/*    background: #FFF8E1; !* Màu be kem *!*/
+/*    transition: border 0.3s;*/
+/*}*/
+
+/*.inputWithIcon:hover {*/
+/*    border: 2px solid #6D4C41;*/
+/*}*/
+
+/*.inputIcon {*/
+/*    margin-right: 12px;*/
+/*    color: #795548; !* Nâu nhạt *!*/
+/*}*/
+
+/*.formControl {*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    width: 100%;*/
+/*    background: transparent;*/
+/*    font-size: 1.2rem;*/
+/*}*/
+
+
+/*!* Link quên mật khẩu và đăng ký *!*/
+/*.links {*/
+/*    margin-top: 60px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.forgotPassword, .registerLink {*/
+/*    color: #6D4C41;*/
+/*    text-decoration: none;*/
+/*    font-size: 1.1rem;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.forgotPassword:hover, .registerLink:hover {*/
+/*    text-decoration: underline;*/
+/*    color: #4E342E;*/
+/*}*/
+
+/*!* Hiệu ứng animation *!*/
+/*@keyframes fadeInLeft {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*        transform: translateX(-50px);*/
+/*    }*/
+/*    to {*/
+/*        opacity: 1;*/
+/*        transform: translateX(0);*/
+/*    }*/
+/*}*/
+
+/*@keyframes fadeInRight {*/
+/*    from {*/
+/*        opacity: 0;*/
+/*        transform: translateX(50px);*/
+/*    }*/
+/*    to {*/
+/*        opacity: 1;*/
+/*        transform: translateX(0);*/
+/*    }*/
+/*}*/
+
+/*@keyframes bounce {*/
+/*    0%, 100% {*/
+/*        transform: translateY(0);*/
+/*    }*/
+/*    50% {*/
+/*        transform: translateY(-5px);*/
+/*    }*/
+/*}*/
+
+/*!* Responsive *!*/
+/*@media (max-width: 768px) {*/
+/*    .loginContainer {*/
+/*        flex-direction: column;*/
+/*    }*/
+
+/*    .leftPanel {*/
+/*        display: none;*/
+/*    }*/
+
+/*    .rightPanel {*/
+/*        flex: 1;*/
+/*        width: 100%;*/
+/*        justify-content: center;*/
+/*    }*/
+
+/*    .loginBox {*/
+/*        width: 85%;*/
+/*    }*/
+/*}*/
+
+/*!**!*/
+
+/*.formGroup {*/
+/*    width: 100%;*/
+/*    margin-bottom: 15px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    position: relative;*/
+/*}*/
+
+/*.inputWithIcon {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*    background: #f7f7f7;*/
+/*    border-radius: 5px;*/
+/*    padding: 10px;*/
+/*}*/
+
+/*.inputIcon {*/
+/*    color: #8e8e8e;*/
+/*    margin-right: 10px;*/
+/*    font-size: 18px;*/
+/*}*/
+
+/*.formControl {*/
+/*    width: 100%;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    background: transparent;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.selectControl, .fileInput {*/
+/*    width: 100%;*/
+/*    padding: 10px;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 5px;*/
+/*    background: #f7f7f7;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.buttonContainer {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    width: 100%;*/
+/*    margin-top: 30px;*/
+/*}*/
+
+/*.loginButton {*/
+/*    background: transparent;*/
+/*    border: 2px solid #8e8e8e;*/
+/*    color: #8e8e8e;*/
+/*    padding: 12px 100px; !* Kéo dài nút hơn *!*/
+/*    font-size: 18px; !* Chữ to hơn *!*/
+/*    border-radius: 8px;*/
+/*    cursor: pointer;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.loginButton:hover {*/
+/*    background: linear-gradient(to right, #ddcdc8, #f3ad9e);*/
+/*    box-shadow: 0px 6px 16px rgba(77, 47, 34, 0.6);*/
+/*    transform: scale(1.05);*/
+/*    color: white;*/
+/*}*/
+
+/*.submitButton {*/
+/*    background: linear-gradient(to right, #8D6E63, #6D4C41);*/
+/*    border: none;*/
+/*    color: #eddede;*/
+/*    font-weight: bold;*/
+/*    padding: 12px 100px; !* Kéo dài nút hơn *!*/
+/*    font-size: 18px; !* Chữ to hơn *!*/
+/*    border-radius: 12px;*/
+/*    cursor: pointer;*/
+/*    transition: all 0.3s;*/
+/*    box-shadow: 0px 5px 15px rgba(141, 110, 99, 0.4);*/
+/*}*/
+
+/*.submitButton:hover {*/
+/*    background: linear-gradient(to right, #6D4C41, #4E342E);*/
+/*        box-shadow: 0px 6px 16px rgba(77, 47, 34, 0.6);*/
+/*        transform: scale(1.05);*/
+/*    color: white;*/
+
+/*}*/
+
+/*.formControl.error {*/
+/*    border: 1px solid red;*/
+/*}*/
+/*!* Tooltip container *!*/
+
+/*!* Tooltip giống trình duyệt *!*/
+/*.customTooltip {*/
+/*    background-color: #ffffcc; !* Màu vàng nhạt giống trình duyệt *!*/
+/*    color: #333; !* Màu chữ đen đậm *!*/
+/*    font-size: 14px;*/
+/*    font-weight: bold;*/
+/*    padding: 6px 10px;*/
+/*    border-radius: 6px;*/
+/*    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);*/
+/*    border: 1px solid #aaa;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 6px;*/
+/*}*/
+
+/*!* Icon cảnh báo *!*/
+/*.customTooltip::before {*/
+/*    content: "⚠"; !* Icon cảnh báo giống trình duyệt *!*/
+/*    font-size: 16px;*/
+/*}*/
+/*!* Lỗi input *!*/
+/*.error {*/
+/*    border: 1px solid red !important;*/
+/*}*/
+
+
+/*!* Giảm kích thước của form *!*/
+/*.loginBox {*/
+/*    width: 600px; !* Giảm kích thước *!*/
+/*    height: 800px; !* Giảm chiều cao *!*/
+/*    padding: 40px; !* Giảm padding *!*/
+/*    border-radius: 12px; !* Giảm bo tròn *!*/
+/*}*/
+
+/*!* Header đăng nhập *!*/
+/*.icon {*/
+/*    font-size: 3rem; !* Nhỏ hơn *!*/
+/*}*/
+
+/*.headerText {*/
+/*    font-size: 1.8rem; !* Giảm font-size *!*/
+/*}*/
+
+/*!* Ô input *!*/
+/*.inputWithIcon {*/
+/*    padding: 6px 10px; !* Nhỏ hơn *!*/
+/*    border-radius: 6px;*/
+/*}*/
+
+/*.inputIcon {*/
+/*    font-size: 16px; !* Nhỏ hơn *!*/
+/*    margin-right: 8px;*/
+/*}*/
+
+/*.formControl {*/
+/*    font-size: 1rem; !* Nhỏ hơn *!*/
+/*}*/
+
+/*!* Giảm khoảng cách giữa các input *!*/
+/*.formGroup {*/
+/*    margin-bottom: 18px;*/
+/*}*/
+
+/*!* Nút bấm *!*/
+/*.loginButton, .submitButton {*/
+/*    padding: 10px 80px; !* Giảm padding *!*/
+/*    font-size: 16px; !* Nhỏ hơn *!*/
+/*    border-radius: 10px; !* Giữ bo tròn nhưng gọn hơn *!*/
+/*}*/
+
+/*!* Link quên mật khẩu và đăng ký *!*/
+/*.forgotPassword, .registerLink {*/
+/*    font-size: 1rem; !* Giảm font-size *!*/
+/*}*/
+
+/*!* Responsive: Đảm bảo form đẹp trên màn hình nhỏ *!*/
+/*@media (max-width: 768px) {*/
+/*    .loginBox {*/
+/*        width: 90%;*/
+/*        height: auto;*/
+/*        padding: 30px;*/
+/*    }*/
+
+/*    .headerText {*/
+/*        font-size: 1.5rem;*/
+/*    }*/
+
+/*    .icon {*/
+/*        font-size: 2.5rem;*/
+/*    }*/
+
+/*    .formControl {*/
+/*        font-size: 0.9rem;*/
+/*    }*/
+
+/*    .loginButton, .submitButton {*/
+/*        padding: 8px 60px;*/
+/*        font-size: 14px;*/
+/*    }*/
+/*}*/
+.loginContainer {
+    display: flex;
+    height: 100vh; /* Chiếm toàn bộ màn hình */
+    background-color: #f5e1c8; /* Màu nền giống quán cà phê */
+    overflow: hidden; /* Chặn tràn nội dung */
+
+}
+
+/* Bên trái chứa hình nền */
+.leftPanel {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+        animation: fadeInLeft 1s ease-in-out;
+
+}
+
+/* Bên phải chứa form đăng ký */
+.rightPanel {
+    flex: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAF3E0;
+    /*border-top-right-radius: 10px;*/
+    /*border-bottom-right-radius: 10px;*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        animation: fadeInRight 1s ease-in-out;
+
+}
+
+/* Hộp chứa form đăng ký */
+.loginBox {
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Tiêu đề đăng ký */
+.loginHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.headerText {
+    font-size: 24px;
+    color: #6b4f3f; /* Màu cà phê */
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* Nhóm input */
+.formGroup {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Ô input */
+.formControl {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c7a17a; /* Viền nâu nhạt */
+    border-radius: 25px;
+    font-size: 16px;
+    background: #fff;
+    color: #5a3e2b; /* Màu chữ cà phê */
+    transition: all 0.3s ease;
+}
+
+/* Khi focus vào ô input */
+.formControl:focus {
+    border-color: #6b4f3f; /* Màu cà phê đậm hơn */
+    box-shadow: 0 0 10px rgba(107, 79, 63, 0.3);
+    outline: none;
+}
+
+/* Ô input có lỗi */
+.formControl.error {
+    border: 2px solid red;
+}
+
+/* Chứa icon và input */
+.inputWithIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon không đè lên input */
+.inputIcon {
+    color: #6b4f3f; /* Màu cà phê */
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* Nút chọn file ảnh */
+.fileInput {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #c7a17a;
+    border-radius: 25px;
+    background: #fff;
+    color: #5a3e2b;
+}
+
+/* Select giới tính */
+.selectControl {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c7a17a;
+    border-radius: 25px;
+    background: #fff;
+    color: #5a3e2b;
+    font-size: 16px;
+}
+
+/* Nút đăng ký và đăng nhập */
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Nút chung */
+.loginButton,
+.submitButton {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Nút đăng nhập */
+.loginButton {
+    background: #c7a17a;
+    color: white;
+}
+
+.loginButton:hover {
+    background: #a67c52;
+}
+
+/* Nút đăng ký */
+.submitButton {
+    background: #6b4f3f;
+    color: white;
+}
+
+.submitButton:hover {
+    background: #5a3e2b;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.loginButton {
+    background: transparent;
+    border: 2px solid #8e8e8e;
+    color: #8e8e8e;
+    padding: 12px 100px; /* Kéo dài nút hơn */
+    font-size: 18px; /* Chữ to hơn */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+    background: linear-gradient(to right, #ddcdc8, #f3ad9e);
+    box-shadow: 0px 6px 16px rgba(77, 47, 34, 0.6);
+    transform: scale(1.05);
+    color: white;
+}
+
+.submitButton {
+    background: linear-gradient(to right, #8D6E63, #6D4C41);
+    border: none;
+    color: #eddede;
+    font-weight: bold;
+    padding: 12px 100px; /* Kéo dài nút hơn */
+    font-size: 18px; /* Chữ to hơn */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0px 5px 15px rgba(141, 110, 99, 0.4);
+}
+
+.submitButton:hover {
+    background: linear-gradient(to right, #6D4C41, #4E342E);
+        box-shadow: 0px 6px 16px rgba(77, 47, 34, 0.6);
+        transform: scale(1.05);
+    color: white;
+
+}
+/* Tooltip giống trình duyệt */
+.customTooltip {
+    background-color: #ffffcc; /* Màu vàng nhạt giống trình duyệt */
+    color: #333; /* Màu chữ đen đậm */
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 5px;
+    border-radius: 6px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Icon cảnh báo */
+.customTooltip::before {
+    content: "⚠"; /* Icon cảnh báo giống trình duyệt */
+    font-size: 16px;
+}
+/* Lỗi input */
+.error {
+    border: 1px solid red !important;
+}
+
+/*!* Hiệu ứng animation *!*/
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}

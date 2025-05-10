@@ -1,0 +1,334 @@
+
+/* Modal Background Overlay */
+.addProductBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Nền đen mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.addProductBody p strong {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Làm đậm tên sản phẩm */
+    font-size: 18px;
+    color: #4b2e2e;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Ngăn dòng chữ bị xuống dòng */
+    overflow: hidden; /* Ẩn nếu quá dài */
+    text-overflow: ellipsis; /* Hiển thị dấu ... nếu quá dài */
+}
+
+/* Modal Container */
+.addProductDialog {
+    display: flex;
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    justify-content: space-between; /* Giãn cách đều giữa các phần tử */
+    background: #fdf7f0; /* Màu nền be nhẹ */
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Bóng mềm mại */
+    padding: 25px;
+    width: 800px;
+    max-width: 90%;
+    height: 740px;
+    color: #4b2e2e; /* Màu nâu đậm */
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+    border: 1px solid #e0d6cc; /* Viền nhẹ để tạo cảm giác thủ công */
+    overflow: hidden; /* Đảm bảo nội dung không tràn ra ngoài */
+}
+.addProductHeader {
+    flex-shrink: 0; /* Giữ nguyên kích thước header */
+    border-bottom: 1px solid #e0d6cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Header */
+.addProductHeader h4 {
+    margin: 0;
+    font-size: 26px; /* Tăng kích thước tiêu đề */
+    font-weight: bold;
+    text-align: center;
+    color: #4b2e2e;
+}
+/* Body */
+.addProductBody {
+    flex-grow: 1; /* Chiếm khoảng trống còn lại */
+    overflow-y: auto; /* Cuộn nội dung nếu quá dài */
+    margin-bottom: 20px;
+    font-size: 18px; /* Tăng kích thước chữ */
+    line-height: 1.8; /* Cải thiện khoảng cách giữa các dòng */
+    color: #5a3d3d;
+}
+
+
+/* Label */
+.addProductBody label {
+    font-weight: bold;
+    margin-bottom: 12px; /* Tăng khoảng cách giữa label và input */
+    display: block;
+    color: #6a4a4a;
+    font-size: 18px; /* Tăng kích thước chữ */
+}
+
+.addProductFooter {
+    display: flex;
+    justify-content: space-between; /* Đặt các nút ở hai góc */
+    flex-shrink: 0; /* Không thay đổi kích thước footer */
+}
+.selectInput,
+.numberInput {
+    width: 100%;
+    border-radius: 10px; /* Bo góc mượt hơn */
+    border: 1px solid #e0d6cc;
+    background: #f9f3ed;
+    color: #4b2e2e;
+    margin-top: 8px;
+    outline: none;
+    transition: 0.3s;
+    padding: 8px; /* Giảm padding để ô nhỏ hơn */
+    font-size: 14px; /* Giảm kích thước chữ */
+    margin-bottom: 10px; /* Giảm khoảng cách */
+}
+
+/* Select Input */
+.selectInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e0d6cc;
+    background: #f9f3ed;
+    color: #4b2e2e;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.selectInput:hover {
+    background: #f2e8dc;
+}
+
+/* Number Input */
+.numberInput {
+    width: 100%;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #e0d6cc;
+    background: #f9f3ed;
+    color: #4b2e2e;
+    font-size: 14px;
+    margin-top: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.numberInput:hover {
+    background: #f2e8dc;
+}
+/* Topping Group */
+.toppingCheckboxGroup {
+    display: flex;
+    margin-top: 10px;
+    overflow: hidden; /* Ngăn thanh cuộn ngang */
+    flex-wrap: wrap; /* Cho phép các topping tự động xuống dòng */
+    gap: 5px; /* Giảm khoảng cách giữa các topping */
+    justify-content: flex-start; /* Căn trái để tiết kiệm không gian */
+    max-height: 120px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Cuộn nếu quá nhiều topping */
+}
+
+.toppingCheckboxGroup div {
+    display: flex;
+    flex-direction: column; /* Chuyển bố cục thành dạng cột */
+    align-items: flex-start; /* Căn tên topping sang trái */
+    justify-content: space-between; /* Tên ở trên, giá ở dưới */
+    background: #f9f3ed;
+    border-radius: 8px;
+    padding: 4px;
+    height: 60px;
+    border: 1px solid #e0d6cc;
+    flex: 1 1 calc(35% - 20px); /* Giảm một chút chiều rộng */
+    box-sizing: border-box; /* Bao gồm cả padding và border trong kích thước */
+    /*max-width: calc(35% - 10px); !* Giới hạn chiều rộng *!*/
+    white-space: nowrap; /* Không xuống dòng */
+    overflow: hidden; /* Ẩn nội dung thừa */
+    text-overflow: ellipsis; /* Thêm dấu "..." nếu quá dài */
+    position: relative; /* Tạo vị trí tương đối để căn chỉnh giá */
+    cursor: pointer; /* Biến toàn khối thành khu vực nhấp được */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động khi hover */
+    font-size: 14px;
+}
+
+/* Hiệu ứng hover */
+.toppingCheckboxGroup div:hover {
+    background: #e0d6cc; /* Đổi màu nền khi hover */
+    transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng bóng mờ */
+}
+
+/* Khi topping được chọn */
+.toppingCheckboxGroup div input:checked ~ .toppingName,
+.toppingCheckboxGroup div input:checked ~ .toppingPrice {
+    color: #300606; /* Thay đổi màu chữ để làm nổi bật */
+}
+
+.toppingCheckboxGroup div input:checked {
+    background: #a67258; /* Thay đổi màu nền khi chọn */
+    border: 2px solid #a67258; /* Đổi màu viền khi được chọn */
+    color: #c55353; /* Đổi màu chữ của tên và giá */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bóng mờ mạnh hơn */
+    transform: scale(1.05); /* Giữ hiệu ứng phóng to */
+}
+
+/* Tên topping */
+.toppingName {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px; /* Tạo khoảng cách giữa tên và giá */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Giá topping */
+.toppingPrice {
+    font-size: 14px;
+    color: #a67258;
+    font-weight: bold;
+    white-space: nowrap; /* Không xuống dòng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute; /* Căn giá ở góc dưới phải */
+    bottom: 8px; /* Cách đáy một khoảng nhỏ */
+    right: 8px; /* Cách phải một khoảng nhỏ */
+}
+
+/* Giữ trạng thái đã chọn */
+.toppingCheckboxGroup div input:checked + .toppingName {
+    font-size: 16px; /* Làm nổi bật tên khi đã chọn */
+    font-weight: bold;
+}
+
+
+.btnPrimary,
+.btnSecondary {
+    flex-shrink: 0; /* Đảm bảo nút không bị co lại */
+    padding: 16px 24px; /* Tăng kích thước nút */
+    font-size: 16px; /* Tăng kích thước chữ */
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+/* Tùy chỉnh thanh cuộn chính */
+.addProductBody::-webkit-scrollbar {
+    width: 10px; /* Độ rộng của thanh cuộn dọc */
+    height: 10px; /* Độ rộng của thanh cuộn ngang (nếu có) */
+}
+
+.addProductBody::-webkit-scrollbar-track {
+    background: #f3e7d6; /* Màu nền của track (đường chạy của thanh cuộn) */
+    border-radius: 10px; /* Bo tròn góc của track */
+}
+
+.addProductBody::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #c7a17c, #a67c5b); /* Hiệu ứng gradient cho thanh cuộn */
+    border-radius: 10px; /* Bo tròn thanh cuộn */
+    border: 2px solid #f3e7d6; /* Viền tạo khoảng cách giữa thumb và track */
+}
+
+.addProductBody::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #a67c5b, #8d6a4a); /* Thay đổi màu khi hover */
+}
+
+.addProductBody::-webkit-scrollbar-corner {
+    background: transparent; /* Phần góc giao giữa hai thanh cuộn */
+}
+
+/* Với các trình duyệt hỗ trợ scrollbar của CSS */
+.addProductBody {
+    scrollbar-color: #a67c5b #f3e7d6; /* Thumb màu #a67c5b, track màu #f3e7d6 */
+    scrollbar-width: thin; /* Độ rộng của thanh cuộn nhỏ gọn */
+}
+
+
+/* Footer */
+.addProductFooter {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.btnPrimary {
+    background: linear-gradient(135deg, #6b4f3a, #9c6d4c);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.btnPrimary:hover {
+    background: linear-gradient(135deg, #5e4331, #8d5c41);
+}
+
+.btnSecondary {
+    background: linear-gradient(135deg, #9c6d4c, #c58c69);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.btnSecondary:hover {
+    background: linear-gradient(135deg, #8d5c41, #b57b5b);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Container hiển thị ảnh */
+.productImage {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Ảnh sản phẩm */
+.productImage .image {
+    width: 150px; /* Giảm kích thước ảnh */
+    height: 120px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 12px; /* Bo góc mượt hơn */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng shadow */
+}

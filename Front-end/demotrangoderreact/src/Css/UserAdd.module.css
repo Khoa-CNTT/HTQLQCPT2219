@@ -1,0 +1,169 @@
+/* Container chính */
+.containera {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background-color: #f8f4f1; /* Màu nền nhẹ nhàng, phù hợp với phong cách quán cà phê */
+}
+
+/* Khung form */
+.formContainera {
+    background: #fff8f0; /* Màu nền ấm cho form */
+    padding: 20px;
+    border-radius: 12px; /* Bo tròn góc mềm mại */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Hiệu ứng bóng mờ nhẹ */
+    width: 1000px;
+    max-width: 90%; /* Đảm bảo form không bị rộng quá */
+}
+
+/* Tiêu đề */
+.titlea {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #6f4f1f; /* Màu nâu ấm, phù hợp với không gian cà phê */
+}
+
+/* Nhóm mỗi hàng label + input */
+.rowa {
+    display: flex;
+    align-items: flex-start; /* Canh label và input từ trên xuống */
+    justify-content: flex-start;
+    margin-bottom: 12px; /* Khoảng cách giữa các hàng */
+    width: 100%;
+}
+
+/* Label (Tiêu đề) nằm bên trái, căn trái đều nhau */
+.labela {
+    flex: 1;
+    text-align: left;
+    padding-right: 25px;
+    font-weight: bold;
+    color: #6f4f1f;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 38px; /* Căn label cao bằng input */
+}
+
+/* Input chung (Cố định chiều rộng) */
+.inputContainera {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column; /* Chuyển về dạng cột để lỗi xuống dưới */
+
+}
+
+.inputa,
+.selecta {
+    width: 100%;
+    max-width: 550px;
+    padding: 8px; /* Giảm padding */
+    border: 1px solid #bfa693; /* Viền màu nâu sáng, tạo cảm giác ấm áp */
+    border-radius: 8px; /* Bo tròn góc mềm mại */
+    background-color: #f7f0e1; /* Màu nền input nhẹ nhàng */
+    font-size: 14px;
+    color: #6f4f1f; /* Chữ màu nâu */
+}
+
+.inputa:focus,
+.selecta:focus {
+    outline: none;
+    border-color: #d79a5a; /* Màu viền khi focus sẽ nổi bật hơn */
+    background-color: #fff; /* Màu nền sáng khi focus */
+}
+
+/* Radio Button */
+.radioGroupa {
+    display: flex;
+    gap: 25px;
+    color: #6f4f1f;
+}
+
+/* Ảnh & Upload */
+.uploadContainera {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    margin-top: 10px; /* Khoảng cách phía trên */
+}
+
+.uploadBtna {
+    background: #bfa693;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.uploadBtna:hover {
+    background: #8f7d62;
+}
+
+.imagePreviewa {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-top: 10px; /* Đảm bảo ảnh có khoảng cách với nút upload */
+}
+
+
+/* Button nhóm */
+.buttonGroupa {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Nút chính và hủy */
+.btna {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px; /* Bo tròn nút */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.cancelBtna {
+    background: #e0a899; /* Màu hồng nhạt cho nút hủy */
+    color: #6f4f1f;
+}
+
+.cancelBtna:hover {
+    background: #c6836c; /* Đổi màu khi hover */
+}
+
+.submitBtna {
+    background: #bfa693; /* Màu cam nhẹ nhàng cho nút submit */
+    color: white;
+}
+
+.submitBtna:hover {
+    background: #8f7d62; /* Màu đậm hơn khi hover */
+}
+.inputWrapper {
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    width: 100%;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px; /* Tạo khoảng cách giữa input và lỗi */
+}
+
+.errorText {
+    color: red; /* Màu đỏ */
+    font-size: 14px; /* Kích thước chữ nhỏ hơn */
+    margin-top: 4px; /* Khoảng cách từ input xuống */
+    font-weight: bold; /* Chữ đậm */
+}

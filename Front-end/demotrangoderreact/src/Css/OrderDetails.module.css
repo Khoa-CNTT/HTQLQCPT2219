@@ -1,0 +1,360 @@
+.orderDetailsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 30px;
+    background-color: #f4f4f4; /* Nền sáng nhẹ */
+    border-radius: 8px; /* Bo góc nhẹ */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    width: 100vw;
+}
+.backToUserButton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #a47148;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 100px;
+}
+
+.backToUserButton:hover {
+    background-color: #8c5a36;
+}
+
+.orderDetailsTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    background: linear-gradient(90deg, #0066cc, #00cc99); /* Gradient cho tiêu đề */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.orderDetailsTitle::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ff6f61; /* Màu nhấn cho đường dưới tiêu đề */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.orderDetailsEmpty {
+    font-size: 1.2rem;
+    color: #777;
+    text-align: center;
+}
+
+.orderDetailsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.orderDetailsCard {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ece6dd; /* Màu nền nhẹ nhàng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*gap: 50px;*/
+    align-items: flex-start;
+    border-left: 4px solid #007bff; /* Đường viền bên trái nổi bật */
+}
+
+.orderDetailsCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.orderDetailsCardHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+    flex: 1 1 calc(50% - 20px);
+    min-width: 200px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.orderDetailsCardText {
+    font-size: 1rem;
+    color: #555;
+    flex: 1 1 calc(50% - 20px);
+    min-width: 200px;
+    margin-bottom: 8px;
+}
+
+.orderDetailsSummary {
+    margin-top: 20px;
+    padding: 20px 30px;
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    width: 100vw;
+}
+
+.orderDetailsSummary p {
+    font-size: 1.6rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.orderDetailsSummary .originalPrice {
+    font-size: 1.8rem;
+    color: #007bff; /* Màu xanh dương */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.orderDetailsSummary .totalPrice {
+    font-size: 2rem;
+    color: #28a745; /* Xanh lá */
+    background: linear-gradient(90deg, #28a745, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.orderDetailsSummary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #28a745);
+    border-radius: 2px;
+}
+.orderDetailsButtonGroup {
+    display: flex; /* Căn nút theo hàng ngang */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    gap: 20px; /* Khoảng cách giữa các nút */
+    margin-top: 20px; /* Khoảng cách phía trên */
+}
+.orderDetailsResetButton,
+.orderDetailsPayButton {
+    margin: 20px 10px 0;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+
+.orderDetailsResetButton {
+    background: linear-gradient(145deg, #f72585, #c2185b);
+}
+
+.orderDetailsResetButton:hover {
+    background: linear-gradient(145deg, #c2185b, #a00b43);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.orderDetailsResetButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orderDetailsPayButton {
+    background: linear-gradient(145deg, #4caf50, #388e3c);
+}
+
+.orderDetailsPayButton:hover {
+    background: linear-gradient(145deg, #388e3c, #2e7d32);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.orderDetailsPayButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orderDetailsPayButton[style*="lightgreen"] {
+    background: linear-gradient(145deg, #d4edda, #c3e6cb);
+    color: #155724;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orderDetailsPayButton[style*="lightgreen"]:hover {
+    background: linear-gradient(145deg, #c3e6cb, #a8d8b0);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.orderDetailsPayButton[style*="lightgreen"]:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+/* Nền mờ phía sau modal */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Nền tối hơn */
+    z-index: 1049;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInOverlay 0.3s ease-out;
+}
+
+/* Nội dung của modal */
+.modalContent {
+    position: relative;
+    background-color: #fff8f0; /* Nền màu sáng, hơi giống màu cà phê */
+    border-radius: 20px;
+    width: 500px; /* Cân đối kích thước modal */
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInModal 0.3s ease-out;
+}
+
+/* Tiêu đề modal */
+h2 {
+    font-size: 2rem;
+    color: #4a3c31; /* Màu nâu cà phê */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Nội dung văn bản */
+/*p {*/
+/*    font-size: 1.2rem;*/
+/*    color: #6d4b3b; !* Màu nâu sáng *!*/
+/*    margin-bottom: 30px;*/
+/*    text-align: center;*/
+/*    font-family: 'Roboto', sans-serif;*/
+/*}*/
+
+/* Nhóm nút */
+.modalButtonGroup {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Các nút */
+.modalButton {
+    width: 48%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa icon và text */
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.modalButton:hover {
+    transform: translateY(-3px);
+}
+
+.modalButton:active {
+    transform: translateY(0);
+}
+
+.modalButton:nth-child(1) {
+    background-color: #6b4f30; /* Nâu đậm */
+}
+
+.modalButton:nth-child(1):hover {
+    background-color: #4a3622;
+}
+
+.modalButton:nth-child(2) {
+    background-color: #8d6e63; /* Màu cà phê sáng */
+}
+
+.modalButton:nth-child(2):hover {
+    background-color: #6d4b3b;
+}
+
+/* Hiệu ứng fade in */
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInModal {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

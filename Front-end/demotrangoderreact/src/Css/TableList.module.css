@@ -1,0 +1,526 @@
+.containeri {
+    padding: 20px;
+    background: #fff8f0; /* Màu nền ấm cho form */
+}
+.headerTextt1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.searchContainer11 {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Đề phòng màn nhỏ bị tràn */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.searchInput11 {
+    flex: 1 1 200px; /* input co dãn, nhưng tối thiểu là 200px */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fffaf5;
+    color: #3e2723;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+.searchInput11{
+    border: 1px solid #3e2723!important;
+}
+
+.searchButton11 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #6d4c41;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchButton11:hover {
+    background-color: #4e342e;
+}
+.iconSearch11 {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+/* Nút thêm mới sản phẩm */
+.addProductButton11 {
+    background-color: #8E4B3A; /* Màu nâu ấm, phù hợp với quán cà phê */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.addProductButton11:hover {
+    background-color: #6F2A1C; /* Màu tối hơn khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon thêm vào nút */
+.addIcon11 {
+    font-size: 20px;  /* Kích thước icon */
+}
+
+/* Căn cách phần dưới một chút */
+.addProductButton11 {
+    margin-bottom: 20px;  /* Khoảng cách giữa nút và phần dưới */
+}
+.tablet1 {
+    width: 100%;
+    border-collapse: collapse; /* Giúp các viền ô không bị cách nhau */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    background-color: #fff; /* Màu nền sáng cho bảng */
+    overflow-y: hidden !important; /* Ẩn cuộn dọc */
+
+}
+
+/* Tiêu đề bảng */
+.tablet1 thead {
+    background-color: #f8f8f8; /* Màu nền nhạt cho phần tiêu đề */
+    color: #333;
+    font-weight: bold;
+    border-radius: 20px!important; ;
+}
+
+/* Các cột tiêu đề */
+.tablet1 th {
+    padding: 12px 15px;
+    text-align: center; /* Căn giữa các tiêu đề */
+    border-bottom: 2px solid #ddd; /* Viền dưới nhẹ cho các cột */
+}
+
+/* Các dòng trong bảng */
+.tablet1 td {
+    padding: 10px 15px;
+    text-align: center; /* Căn giữa các cột dữ liệu */
+    border-bottom: 1px solid #ddd; /* Viền dưới cho các dòng */
+}
+
+/* Hiệu ứng hover cho mỗi dòng */
+.tablet1 tbody tr:hover {
+    background-color: #f5f5f5; /* Màu nền khi hover qua dòng */
+    cursor: pointer;
+}
+/* Cột tác vụ */
+.actions11 {
+    /*display: flex;*/
+    justify-content: center;
+    gap: 20px; /* Tăng khoảng cách giữa các nút */
+
+}
+/* Nút chỉnh sửa */
+.editButton11, .deleteButton11 {
+    background-color: #8B4513; /* Màu nâu khi hover */
+    border: none;
+    padding: 10px 20px; /* Tăng kích thước nút */
+    font-size: 16px; /* Kích thước chữ */
+    color: white; /* Màu chữ */
+    border-radius: 6px; /* Bo tròn các góc nút */
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    align-items: center; /* Căn giữa icon với chữ */
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+}
+
+/* Nút chỉnh sửa hover */
+.editButton11:hover {
+    background-color: #8B4513; /* Màu nâu khi hover */
+    transform: scale(1.05); /* Phóng to nút khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ khi hover */
+}
+
+/* Nút xóa */
+.deleteButton11 {
+    background-color: #6F4F37; /* Màu nâu khi hover */
+    border: none;
+    padding: 10px 20px; /* Tăng kích thước nút */
+    font-size: 16px; /* Kích thước chữ */
+    color: white; /* Màu chữ */
+    border-radius: 6px; /* Bo tròn các góc nút */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block; /* Đảm bảo các icon nằm trên cùng 1 hàng */
+
+    align-items: center; /* Căn giữa icon với chữ */
+    gap: 8px; /* Khoảng cách giữa icon và chữ */
+}
+
+/* Nút xóa hover */
+.deleteButton11:hover {
+    background-color: #6F4F37; /* Màu nâu khi hover */
+    transform: scale(1.05); /* Phóng to nút khi hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ khi hover */
+}
+
+/* Thêm icon với FontAwesome */
+.fa-edit, .fa-trash {
+    font-size: 18px; /* Kích thước icon */
+}
+/* Container phân trang */
+.paginationContainert1 {
+    display: flex;
+    justify-content: center; /* Căn giữa phần phân trang */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Nút phân trang "Trước" và "Sau" */
+.paginationButtont1 {
+    background-color: #8e6e53; /* Màu nâu cà phê cho nút */
+    color: white; /* Màu chữ */
+    border: none;
+    padding: 10px 20px; /* Kích thước nút */
+    font-size: 16px; /* Kích thước chữ */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng khi hover */
+    margin: 0 10px; /* Khoảng cách giữa các nút */
+}
+/* Hiển thị trang hiện tại */
+.pageInfot1 {
+    font-size: 18px;
+    font-weight: bold; /* Làm chữ đậm */
+    color: #6f4f28; /* Màu nâu cà phê */
+    margin: 0 10px; /* Khoảng cách giữa các nút */
+}
+
+/* Nút phân trang khi không active */
+.paginationButtont1:focus {
+    outline: none; /* Loại bỏ viền focus */
+}
+.paginationButtont1:hover {
+    background-color: #6f4f28; /* Màu nâu đậm hơn khi hover */
+    transform: scale(1.1); /* Phóng to nút khi hover */
+}
+
+.modalyTable {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* mờ nền */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 1000;
+}
+.modalContentyTable {
+    background-color: #f3ece7;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    width: 680px;
+    max-width: 90%;
+    animation: slideUp 0.4s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.modalContentyTable h3 {
+    margin-bottom: 16px;
+    color: #6f4e37;
+    font-size: 24px;
+    text-align: center;
+}
+
+.searchInputyTable {
+    width: 100%;
+    padding: 7px 14px;
+    margin: 8px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.searchInputyTable:focus {
+    border-color: #a1866f!important;
+    outline: none;
+}
+.errorTextyTable {
+    color: red;
+    font-size: 13px;
+    margin-top: -18px;
+    margin-bottom: 10px;
+}
+.modalActionyTable {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.searchButtonyTable,
+.cancelButtonyTable {
+    flex: 1;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchButtonyTable {
+    background-color: #6f4e37;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.searchButtonyTable:hover {
+    background-color: #8b5e3c;
+}
+
+.cancelButtonyTable {
+    background-color: #ddd;
+    color: #333;
+}
+
+.cancelButtonyTable:hover {
+    background-color: #bbb;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.modalOverlayt1edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 24, 20, 0.6); /* nâu đen trong suốt */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+}
+/* Modal container với hiệu ứng mượt */
+.modalt1edit {
+    background-color: #f7f3ed; /* màu kem */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 620px;
+    max-width: 90%;
+    color: #4e342e;
+
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.4s ease-out forwards;
+}
+
+/* Hiệu ứng xuất hiện modal */
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.modalt1edit h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #3e2723;
+}
+
+.modalt1edit label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+.modalt1edit1 input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    background-color: #fffaf5;
+    color: #3e2723;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Màu nâu đậm khi focus */
+.modalt1edit input:focus {
+    border-color: #4e342e;
+    box-shadow: 0 0 5px rgba(78, 52, 46, 0.5);
+}
+
+.buttonRowt12 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttonRowt12 button {
+    background-color: #6d4c41;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttonRowt12 button:hover {
+    background-color: #4e342e;
+    transform: scale(1.05);
+}
+.errorTable {
+    color: red;
+    font-size: 13px;
+    /*margin-top: -10px;*/
+    margin-bottom: 20px;
+}
+.modalOverladd1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 20, 10, 0.6); /* Mờ nền màu nâu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px); /* hiệu ứng mờ nền */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalContentdd1 {
+    background-color: #fdf5e6; /* màu nền be nhạt */
+    color: #3e2c1c; /* màu chữ nâu trầm */
+    border-radius: 12px;
+    padding: 24px 32px;
+    width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    animation: zoomIn 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modalContentdd1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #4b2e2e;
+}
+
+.modalContentdd1 p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.modalButtonsdd1 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.confirmBtndd1 {
+    background-color: #8b4513; /* nâu cafe */
+    color: #fff8f0;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirmBtndd1:hover {
+    background-color: #5e2b0d;
+}
+
+.cancelBtndd1 {
+    background-color: #ccc;
+    color: #333;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancelBtndd1:hover {
+    background-color: #aaa;
+}
+
+/* Hiệu ứng khi modal hiện */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        background: rgba(30, 20, 10, 0);
+    }
+    to {
+        background: rgba(30, 20, 10, 0.6);
+    }
+}
+.searchContainer112 {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap; /* Đề phòng màn nhỏ bị tràn */
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+
+}
+.searchInput112 {
+    padding: 5px 10px; /* Thêm khoảng cách trong ô input */
+    border-radius: 5px; /* Bo góc cho ô input */
+    border: 1px solid #ccc; /* Viền nhẹ cho ô input */
+    font-size: 16px; /* Kích thước chữ */
+    width: 400px!important; /* Cắt ngắn chiều rộng của input */
+
+}
+.searchInput112{
+    border: 1px solid #3e2723!important;
+}

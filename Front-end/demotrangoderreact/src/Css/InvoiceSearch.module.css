@@ -1,0 +1,258 @@
+.invoiceSearchWrapper {
+    display: flex;
+    justify-content: center; /* canh giữa theo chiều ngang */
+}
+
+.invoiceSearchContainer {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 100px;
+}
+
+.invoiceInput {
+    border: 1px solid #ccc;
+    /*padding: 0.5rem;*/
+    border-radius: 8px;
+    width: 500px!important; /* thu nhỏ hơn nữa */
+    font-size: 0.9rem;
+    white-space: nowrap;     /* giữ nội dung trên 1 dòng */
+    overflow: hidden;        /* ẩn phần tràn */
+    text-overflow: ellipsis; /* hiện dấu ... nếu quá dài */
+    padding-left: 100px;
+}
+.invoiceInput:focus{
+    border: 1px solid #8b5e3c!important;
+}
+.dateInputWrapper {
+    display: flex;
+    justify-content: center; /* căn giữa theo chiều ngang */
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+
+.dateInput {
+    width: 300px!important;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.searchButtono {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #8b5e3c; /* tone nâu cafe */
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.searchButtono:hover {
+    background-color: #a06d46;
+}
+
+.searchIcono {
+    font-size: 1rem;
+}
+.invoiceTable {
+    width: 100%;
+    min-width: 800px;
+    background-color: #fff8f0;
+    border: 1px solid #d3c5b3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    border-collapse: collapse;
+    text-align: center; /* Canh giữa nội dung theo chiều ngang */
+}
+
+.invoiceTable thead {
+    background-color: #f3e8dc;
+}
+
+.invoiceTable th,
+.invoiceTable td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e1d7ca;
+    vertical-align: middle; /* Canh giữa theo chiều dọc */
+    text-align: center;     /* Canh giữa theo chiều ngang */
+}
+
+.invoiceTable tbody tr:nth-child(even) {
+    background-color: #fffdfb;
+}
+
+.invoiceTable tbody tr:hover {
+    background-color: #fceedd;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.actionCell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.eyeButton {
+    color: #3b82f6;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.eyeButton:hover {
+    color: #1d4ed8;
+}
+.paginationContainerp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #4b3d2f;
+}
+
+.paginationButtonp {
+    padding: 0.7rem 1rem;
+    background-color: #d6c2a8;
+    color: #3b2f23;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.paginationButtonp:hover {
+    background-color: #b89f7d;
+}
+
+.paginationButtonp:disabled {
+    background-color: #e5ddd1;
+    color: #a1a1a1;
+    cursor: not-allowed;
+}
+
+.pageInfop {
+    font-weight: 500;
+}
+/* InvoiceModal.module.css */
+
+.modalOverlayp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalContentp {
+    background-color: #fffaf5;
+    color: #3e3e3e;
+    border-radius: 12px;
+    position: relative;
+
+    padding: 30px 35px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.closeModalButtonp {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.closeModalButtonp:hover {
+    transform: scale(1.2);
+    color: #d00;
+}
+
+.orderDetailp {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border: 1px solid #f0e6dd;
+    box-shadow: 0 2px 5px rgba(160, 130, 90, 0.1);
+}
+
+.orderDetailp h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #6a4e42;
+}
+
+.orderDetailp p {
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.orderDetailp strong {
+    color: #47332f;
+}
+
+/* Hiệu ứng mượt */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Thanh cuộn mềm mại */
+.modalContentp::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modalContentp::-webkit-scrollbar-thumb {
+    background-color: #d1bfa8;
+    border-radius: 3px;
+}

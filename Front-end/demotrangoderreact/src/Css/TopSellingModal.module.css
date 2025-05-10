@@ -1,0 +1,231 @@
+/*.modalOverlay {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    background-color: rgba(0, 0, 0, 0.4);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    z-index: 999;*/
+/*}*/
+
+/*.modal {*/
+/*    background-color: #fff;*/
+/*    padding: 30px;*/
+/*    border-radius: 12px;*/
+/*    width: 600px; !* Tăng chiều rộng của modal *!*/
+/*    height: 500px; !* Tăng chiều cao của modal *!*/
+/*    max-width: 90%;*/
+/*    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.productList {*/
+/*    margin-top: 20px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-between;*/
+/*    height: 100%; !* Chiếm toàn bộ chiều cao của modal *!*/
+/*}*/
+
+/*.row {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    gap: 10px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*!* Tạo khoảng cách cho hàng thứ 2 *!*/
+/*!*.row:nth-child(2) {*!*/
+/*!*    margin-top: 20px; !* Tạo khoảng cách cho hàng thứ 2 *!*!*/
+/*!*}*!*/
+
+/*.row:last-child {*/
+/*    justify-content: center;*/
+/*}*/
+/*.productCard {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    width: 30%;*/
+/*    height: 100%; !* Chiều cao của khối sẽ bằng chiều cao modal *!*/
+/*    padding: 5px;*/
+/*    background-color: #f5f5f5;*/
+/*    border-radius: 8px;*/
+/*    text-align: center;*/
+/*    overflow: hidden; !* Đảm bảo không bị tràn *!*/
+/*}*/
+
+/*.productCard img {*/
+/*    width: 100%;*/
+/*    height: 100px; !* Cố định chiều cao của ảnh *!*/
+/*    object-fit: cover; !* Đảm bảo ảnh không bị méo hoặc vỡ *!*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*.productInfo h4 {*/
+/*    font-size: 16px;*/
+/*    margin: 10px 0 5px;*/
+/*    white-space: nowrap; !* Giữ tên sản phẩm luôn trên một hàng *!*/
+/*}*/
+/*.productInfo p {*/
+/*    color: #888;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.closeBtn {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    right: 15px;*/
+/*    font-size: 20px;*/
+/*    background: none;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 720px;
+    padding: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.productList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.productCard {
+    flex: 1;
+    max-width: 180px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.productCard:hover {
+    transform: translateY(-4px);
+}
+
+.productCard img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.productInfo {
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+.productInfo h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.productInfo p {
+    font-size: 14px;
+    color: #e67e22;
+    font-weight: bold;
+}
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.closeButtonBottom {
+    background-color: #a9744f; /* màu nâu cafe sữa */
+    color: #fff8f0; /* trắng ngà nhẹ */
+    border: none;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.closeButtonBottom:hover {
+    background-color: #8c5a39; /* nâu đậm hơn một chút khi hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

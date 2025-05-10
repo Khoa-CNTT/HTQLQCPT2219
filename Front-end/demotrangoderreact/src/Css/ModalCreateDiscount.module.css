@@ -1,0 +1,101 @@
+.overlayg {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalContainerg {
+    background-color: #fefdf8;
+    border-radius: 16px;
+    padding: 24px;
+    width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.modalTitleg {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #47382b;
+    margin-bottom: 16px;
+}
+
+.labelg {
+    display: block;
+    font-weight: 500;
+    color: #5d4534;
+    margin-bottom: 8px;
+}
+
+.inputg {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.inputg:focus {
+    border-color: #bc9b7d;
+    outline: none;
+}
+
+.errorTextg {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: -8px;
+    margin-bottom: 12px;
+}
+
+.buttonGroupg {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.cancelButtong {
+    background-color: #9e9e9e;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cancelButtong:hover {
+    background-color: #7b7b7b;
+}
+
+.createButtong {
+    background-color: #3b7d57;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.createButtong:hover {
+    background-color: #2f6647;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
